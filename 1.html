@@ -12,7 +12,7 @@
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             background: transparent;
             color: #ffffff;
-            text-shadow: 0 1px 3px rgba(0,0,0,0.8);
+            /* 已移除 text-shadow，避免字迹虚化 */
         }
         
         .panel-announcement {
@@ -27,6 +27,10 @@
             display: flex;
             align-items: center;
             gap: 8px;
+            /* 加深背景防止白字看不清 */
+            background: rgba(0, 0, 0, 0.4);
+            padding: 8px 12px;
+            border-radius: 8px;
         }
         
         .item {
@@ -34,10 +38,11 @@
             align-items: center;
             margin-bottom: 8px;
             font-size: 0.95rem;
-            background: rgba(255, 255, 255, 0.05);
-            padding: 6px 12px;
+            /* 加深背景透明度，实现无阴影的高可读性 */
+            background: rgba(0, 0, 0, 0.4);
+            padding: 8px 12px;
             border-radius: 8px;
-            border-left: 2px solid rgba(76, 175, 80, 0.6);
+            border-left: 3px solid rgba(76, 175, 80, 0.8);
         }
         
         .tag-new {
@@ -46,7 +51,7 @@
             border-radius: 12px;
             margin-left: 10px;
             font-size: 0.75rem;
-            border: 1px solid rgba(255,255,255,0.2);
+            border: 1px solid #a5d6a7;
             color: #a5d6a7;
         }
         
@@ -60,11 +65,15 @@
         
         .footer-time {
             margin-top: 12px;
-            color: rgba(255,255,255,0.5);
+            color: rgba(255,255,255,0.7);
             font-size: 0.8rem;
             text-align: right;
-            border-top: 1px solid rgba(255,255,255,0.1);
+            border-top: 1px solid rgba(255,255,255,0.2);
             padding-top: 8px;
+            background: rgba(0, 0, 0, 0.2);
+            padding-right: 12px;
+            padding-bottom: 4px;
+            border-radius: 4px;
         }
     </style>
 </head>
@@ -75,7 +84,7 @@
         </div>
         
         <div class="item">
-            <span>✅ 面板 <b>v1.0.0</b> 正式版本已上线运行。</span>
+            <span>✅ 面板 <b>dev0.0.1</b> 开发版本已上线运行。</span>
         </div>
         
         <div class="item">
