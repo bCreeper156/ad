@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>隐私政策 / Privacy Policy</title>
+    <style>
+        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; line-height: 1.7; padding: 20px; max-width: 800px; margin: auto; }
+        h1, h2 { border-bottom: 1px solid #ddd; padding-bottom: 6px; }
+        button { padding: 6px 12px; margin-bottom: 16px; cursor: pointer; }
+        .lang-en, .lang-zh { display: none; }
+        html:not(.lang-en) .lang-zh { display: block; }
+        html.lang-en .lang-en { display: block; }
+        html.lang-en .lang-zh { display: none; }
+    </style>
+</head>
+<body>
+    <button onclick="document.documentElement.classList.toggle('lang-en')">English / 中文</button>
+
+    <h1 class="lang-zh">隐私政策</h1>
+    <p class="lang-zh"><strong>最后更新：2026 年 8 月 15 日</strong></p>
+    <p class="lang-zh">本博客（156blog）部署于境外，面向全球访客提供服务。我们高度重视你的隐私，并依据 GDPR 及《中华人民共和国个人信息保护法》制定本政策。</p>
+
+    <h2 class="lang-zh">1. 我们收集哪些数据</h2>
+    <p class="lang-zh">为反垃圾评论与保障安全，系统自动记录：评论内容、昵称、邮箱（可选）、IP 地址、User‑Agent 及 Cloudflare Turnstile 验证数据。</p>
+
+    <h2 class="lang-zh">2. 数据用途</h2>
+    <p class="lang-zh">仅用于展示评论、拦截垃圾与运维排查。<strong>绝不用于广告画像、追踪或出售。</strong></p>
+
+    <h2 class="lang-zh">3. 存储与保留</h2>
+    <p class="lang-zh">评论长期保留；IP 与技术日志短期留存（≤90 天）后自动清理或匿名化。</p>
+
+    <h2 class="lang-zh">4. 你的权利</h2>
+    <p class="lang-zh">你有权访问、更正或删除你的评论及相关数据。请联系博主行使权利。</p>
+
+    <h2 class="lang-zh">5. 法律适用</h2>
+    <p class="lang-zh">本博客服务器位于境外，遵循 GDPR；若你位于中国境内，亦遵守 PIPL 长臂管辖，博主依法管理违法内容。</p>
+
+    <hr class="lang-zh">
+    <p class="lang-zh">如有疑问，请通过博客渠道联系我们。</p>
+
+    <!-- English -->
+    <h1 class="lang-en">Privacy Policy</h1>
+    <p class="lang-en"><strong>Last updated: August 15, 2026</strong></p>
+    <p class="lang-en">156blog is hosted outside China and available globally. We respect your privacy and comply with GDPR and China’s PIPL.</p>
+
+    <h2 class="lang-en">1. Data We Collect</h2>
+    <p class="lang-en">To prevent spam and ensure security, we automatically process: comment content, nickname, optional email, IP address, User‑Agent, and Cloudflare Turnstile verification data.</p>
+
+    <h2 class="lang-en">2. Purpose</h2>
+    <p class="lang-en">Data is used solely to display comments, block spam, and maintain service stability. <strong>We never use it for ads, tracking, or selling.</strong></p>
+
+    <h2 class="lang-en">3. Retention</h2>
+    <p class="lang-en">Comments are retained until deletion is requested. IP logs are kept for a short period (≤90 days) and then purged or anonymized.</p>
+
+    <h2 class="lang-en">4. Your Rights</h2>
+    <p class="lang-en">You may access, correct, or delete your comments and related data. Contact the blog owner to exercise these rights.</p>
+
+    <h2 class="lang-en">5. Governing Law</h2>
+    <p class="lang-en">The blog is hosted offshore under GDPR. If you are in China, PIPL still applies to illegal content, and the blog owner will comply with lawful requests.</p>
+
+    <hr class="lang-en">
+    <p class="lang-en">For questions, contact us via the blog.</p>
+
+    <script>
+        // 记住用户选择
+        document.querySelector('button').addEventListener('click', () => {
+            localStorage.setItem('lang', document.documentElement.classList.contains('lang-en') ? 'zh' : 'en');
+        });
+        if (localStorage.getItem('lang') === 'en') {
+            document.documentElement.classList.add('lang-en');
+        }
+    </script>
+</body>
+</html>
