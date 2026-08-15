@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>用户与评论政策 / Comment Policy</title>
+    <style>
+        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; line-height: 1.7; padding: 20px; max-width: 800px; margin: auto; }
+        h1, h2 { border-bottom: 1px solid #ddd; padding-bottom: 6px; }
+        button { padding: 6px 12px; margin-bottom: 16px; cursor: pointer; }
+        .lang-en, .lang-zh { display: none; }
+        html:not(.lang-en) .lang-zh { display: block; }
+        html.lang-en .lang-en { display: block; }
+        html.lang-en .lang-zh { display: none; }
+    </style>
+</head>
+<body>
+    <button onclick="document.documentElement.classList.toggle('lang-en')">English / 中文</button>
+
+    <h1 class="lang-zh">用户与评论政策</h1>
+    <p class="lang-zh"><strong>最后更新：2026 年 8 月 15 日</strong></p>
+    <p class="lang-zh">欢迎来到 156blog。本站实行<strong>匿名评论</strong>，但匿名不代表免责。</p>
+
+    <h2 class="lang-zh">1. 发言规则</h2>
+    <ul class="lang-zh">
+        <li>无需绑定手机号，昵称请勿冒充他人。</li>
+        <li>禁止网暴、歧视、造谣、色情、暴力及垃圾广告。</li>
+        <li>评论开放时间为每日 <strong>8:00 – 22:00</strong>（服务器时间）。</li>
+    </ul>
+
+    <h2 class="lang-zh">2. 人机验证</h2>
+    <p class="lang-zh">提交评论前需通过 Cloudflare Turnstile 验证，防止机器人滥用。</p>
+
+    <h2 class="lang-zh">3. 管理权限</h2>
+    <p class="lang-zh">博主有权删除违规评论、留存 IP 日志（≤90 天）并封禁严重违规者。</p>
+
+    <h2 class="lang-zh">4. 免责声明</h2>
+    <p class="lang-zh">评论仅代表用户观点，博主不承担因网络故障导致的提交失败责任。</p>
+
+    <h2 class="lang-zh">5. 法律适用</h2>
+    <p class="lang-zh">本站遵循 GDPR；中国境内访客仍需遵守本地法律，违法内容将依法处置。</p>
+
+    <hr class="lang-zh">
+    <p class="lang-zh"><strong>简言之：你可以匿名说话，但不能乱说话；我有责任删垃圾，但不会要你手机号。</strong></p>
+
+    <!-- English -->
+    <h1 class="lang-en">Comment Policy</h1>
+    <p class="lang-en"><strong>Last updated: August 15, 2026</strong></p>
+    <p class="lang-en">Welcome to 156blog. We offer <strong>anonymous commenting</strong>; anonymity does not mean immunity.</p>
+
+    <h2 class="lang-en">1. Rules</h2>
+    <ul class="lang-en">
+        <li>No phone number required; do not impersonate others.</li>
+        <li>No harassment, hate speech, defamation, pornography, violence, or spam.</li>
+        <li>Commenting is allowed daily from <strong>08:00 to 22:00</strong> (server time).</li>
+    </ul>
+
+    <h2 class="lang-en">2. Human Verification</h2>
+    <p class="lang-en">All comments require Cloudflare Turnstile verification to prevent bot abuse.</p>
+
+    <h2 class="lang-en">3. Moderation</h2>
+    <p class="lang-en">The blog owner may delete comments, retain IP logs (≤90 days), and ban severe offenders.</p>
+
+    <h2 class="lang-en">4. Disclaimer</h2>
+    <p class="lang-en">Comments are user‑owned. The blog owner is not liable for failed submissions due to network issues.</p>
+
+    <h2 class="lang-en">5. Governing Law</h2>
+    <p class="lang-en">This site follows GDPR. Visitors in China must still comply with local laws; illegal content will be handled lawfully.</p>
+
+    <hr class="lang-en">
+    <p class="lang-en"><strong>In short: you may speak anonymously, but not recklessly; spam will be removed, and your phone number will never be asked for.</strong></p>
+
+    <script>
+        document.querySelector('button').addEventListener('click', () => {
+            localStorage.setItem('lang', document.documentElement.classList.contains('lang-en') ? 'zh' : 'en');
+        });
+        if (localStorage.getItem('lang') === 'en') {
+            document.documentElement.classList.add('lang-en');
+        }
+    </script>
+</body>
+</html>
