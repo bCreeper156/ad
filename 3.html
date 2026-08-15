@@ -1,81 +1,90 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
-    <meta charset="UTF-8">
-    <title>用户与评论政策 / Comment Policy</title>
-    <style>
-        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; line-height: 1.7; padding: 20px; max-width: 800px; margin: auto; }
-        h1, h2 { border-bottom: 1px solid #ddd; padding-bottom: 6px; }
-        button { padding: 6px 12px; margin-bottom: 16px; cursor: pointer; }
-        .lang-en, .lang-zh { display: none; }
-        html:not(.lang-en) .lang-zh { display: block; }
-        html.lang-en .lang-en { display: block; }
-        html.lang-en .lang-zh { display: none; }
-    </style>
+<meta charset="UTF-8">
+<title>用户与评论政策 / Comment Policy</title>
+<style>
+body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; line-height: 1.8; max-width: 800px; margin: 0 auto; padding: 20px; background: #fff; color: #333; }
+hr { border: none; border-top: 1px solid #ddd; margin: 30px 0; }
+ul { padding-left: 20px; }
+h1 { font-size: 24px; border-bottom: 2px solid #000; padding-bottom: 10px; }
+h2 { font-size: 18px; margin-top: 20px; }
+.lang-switcher { text-align: center; margin-bottom: 20px; }
+.lang-switcher a { display: inline-block; padding: 8px 16px; margin: 0 5px; text-decoration: none; background: #f0f0f0; border: 1px solid #ccc; border-radius: 4px; font-size: 14px; color: #333; }
+.lang-switcher a.active { background: #000; color: #fff; border-color: #000; }
+.lang-en { display: none; }
+.lang-zh { display: block; }
+#en:target ~ .lang-zh { display: none; }
+#en:target ~ .lang-en { display: block; }
+#en:target ~ .lang-switcher a.btn-zh { background: #f0f0f0; color: #333; border-color: #ccc; }
+#en:target ~ .lang-switcher a.btn-en { background: #000; color: #fff; border-color: #000; }
+#zh:target ~ .lang-en { display: none; }
+#zh:target ~ .lang-zh { display: block; }
+#zh:target ~ .lang-switcher a.btn-en { background: #f0f0f0; color: #333; border-color: #ccc; }
+#zh:target ~ .lang-switcher a.btn-zh { background: #000; color: #fff; border-color: #000; }
+body:not(:has(#zh:target)):not(:has(#en:target)) .lang-switcher a.btn-zh { background: #000; color: #fff; border-color: #000; }
+</style>
 </head>
 <body>
-    <button onclick="document.documentElement.classList.toggle('lang-en')">English / 中文</button>
-
-    <h1 class="lang-zh">用户与评论政策</h1>
-    <p class="lang-zh"><strong>最后更新：2026 年 8 月 15 日</strong></p>
-    <p class="lang-zh">欢迎来到 156blog。本站实行<strong>匿名评论</strong>，但匿名不代表免责。</p>
-
-    <h2 class="lang-zh">1. 发言规则</h2>
-    <ul class="lang-zh">
-        <li>无需绑定手机号，昵称请勿冒充他人。</li>
-        <li>禁止网暴、歧视、造谣、色情、暴力及垃圾广告。</li>
-        <li>评论开放时间为每日 <strong>8:00 – 22:00</strong>（服务器时间）。</li>
-    </ul>
-
-    <h2 class="lang-zh">2. 人机验证</h2>
-    <p class="lang-zh">提交评论前需通过 Cloudflare Turnstile 验证，防止机器人滥用。</p>
-
-    <h2 class="lang-zh">3. 管理权限</h2>
-    <p class="lang-zh">博主有权删除违规评论、留存 IP 日志（≤90 天）并封禁严重违规者。</p>
-
-    <h2 class="lang-zh">4. 免责声明</h2>
-    <p class="lang-zh">评论仅代表用户观点，博主不承担因网络故障导致的提交失败责任。</p>
-
-    <h2 class="lang-zh">5. 法律适用</h2>
-    <p class="lang-zh">本站遵循 GDPR；中国境内访客仍需遵守本地法律，违法内容将依法处置。</p>
-
-    <hr class="lang-zh">
-    <p class="lang-zh"><strong>简言之：你可以匿名说话，但不能乱说话；我有责任删垃圾，但不会要你手机号。</strong></p>
-
-    <!-- English -->
-    <h1 class="lang-en">Comment Policy</h1>
-    <p class="lang-en"><strong>Last updated: August 15, 2026</strong></p>
-    <p class="lang-en">Welcome to 156blog. We offer <strong>anonymous commenting</strong>; anonymity does not mean immunity.</p>
-
-    <h2 class="lang-en">1. Rules</h2>
-    <ul class="lang-en">
-        <li>No phone number required; do not impersonate others.</li>
-        <li>No harassment, hate speech, defamation, pornography, violence, or spam.</li>
-        <li>Commenting is allowed daily from <strong>08:00 to 22:00</strong> (server time).</li>
-    </ul>
-
-    <h2 class="lang-en">2. Human Verification</h2>
-    <p class="lang-en">All comments require Cloudflare Turnstile verification to prevent bot abuse.</p>
-
-    <h2 class="lang-en">3. Moderation</h2>
-    <p class="lang-en">The blog owner may delete comments, retain IP logs (≤90 days), and ban severe offenders.</p>
-
-    <h2 class="lang-en">4. Disclaimer</h2>
-    <p class="lang-en">Comments are user‑owned. The blog owner is not liable for failed submissions due to network issues.</p>
-
-    <h2 class="lang-en">5. Governing Law</h2>
-    <p class="lang-en">This site follows GDPR. Visitors in China must still comply with local laws; illegal content will be handled lawfully.</p>
-
-    <hr class="lang-en">
-    <p class="lang-en"><strong>In short: you may speak anonymously, but not recklessly; spam will be removed, and your phone number will never be asked for.</strong></p>
-
-    <script>
-        document.querySelector('button').addEventListener('click', () => {
-            localStorage.setItem('lang', document.documentElement.classList.contains('lang-en') ? 'zh' : 'en');
-        });
-        if (localStorage.getItem('lang') === 'en') {
-            document.documentElement.classList.add('lang-en');
-        }
-    </script>
+<div id="zh"></div>
+<div id="en"></div>
+<div class="lang-switcher">
+<a href="#zh" class="btn-zh">中文</a>
+<a href="#en" class="btn-en">English</a>
+</div>
+<div class="lang-zh">
+<h1>用户与评论政策</h1>
+<p><strong>最后更新：2026 年 8 月 15 日</strong></p>
+<p>欢迎来到 156blog。为维护理性的交流环境，本站实行<strong>匿名评论</strong>，但匿名不代表免责。请遵守以下规则：</p>
+<h2>1. 发言规则</h2>
+<ul>
+<li><strong>必填信息</strong>：发表评论需填写昵称与邮箱，二者均为必填项；网址为可选。</li>
+<li><strong>禁止内容</strong>：严禁发布包含攻击他人、网暴、歧视、造谣、色情、暴力、恐怖主义或垃圾广告等违法违规内容的评论。</li>
+</ul>
+<h2>2. 人机验证</h2>
+<p>为防止机器人滥用，提交评论前需通过 <strong>GeeTest（极验）</strong> 人机验证（滑动/点选等）。该验证由 GeeTest 提供，行为数据由其服务端处理，我们不存储您的鼠标轨迹等原始行为数据，仅保留验证是否通过的结果。</p>
+<h2>3. 管理权限</h2>
+<ul>
+<li><strong>删除与隐藏</strong>：有权删除或隐藏违反上述规则的评论。</li>
+<li><strong>IP 日志留存</strong>：系统后台会永久留存提交评论时的 IP 地址及 User-Agent 数据于 MongoDB 数据库中，除非数据库数据被手动清除。此日志用于配合司法机关溯源及反垃圾审计，不作他用。</li>
+<li><strong>封禁</strong>：对于严重违规者，有权封禁其 IP 段或设备指纹。</li>
+</ul>
+<h2>4. 免责声明</h2>
+<ul>
+<li>评论区内容仅代表评论者个人观点，不代表博主或本站立场。</li>
+<li>因网络延迟、服务器故障导致的评论提交失败，博主不承担赔偿责任。</li>
+</ul>
+<h2>5. 法律适用与管辖</h2>
+<p>本博客服务器部署于境外，评论数据处理遵循 <strong>GDPR</strong> 标准。鉴于互联网无国界，若您在中国大陆境内访问本站，请知悉：中国法律禁止在网络上传播违法信息。如评论内容违反中国法律，博主将依法配合相关机构进行调查与处置。</p>
+<hr>
+<p>如有任何疑问，请通过博客相关渠道联系我们。</p>
+</div>
+<div class="lang-en">
+<h1>Comment Policy</h1>
+<p><strong>Last updated: August 15, 2026</strong></p>
+<p>Welcome to 156blog. We offer <strong>anonymous commenting</strong>; anonymity does not mean immunity. Please observe the following rules:</p>
+<h2>1. Rules</h2>
+<ul>
+<li><strong>Required Information</strong>: To post a comment, a nickname and email address are required; a website URL is optional.</li>
+<li><strong>Prohibited Content</strong>: No harassment, hate speech, defamation, pornography, violence, terrorism, or spam.</li>
+</ul>
+<h2>2. Human Verification</h2>
+<p>All comments require <strong>GeeTest</strong> human verification (slide/captcha). Verification is processed by GeeTest; we do not store your raw behavioral data (e.g., mouse paths), only whether the verification passed.</p>
+<h2>3. Moderation</h2>
+<ul>
+<li><strong>Deletion</strong>: The blog owner may delete or hide violating comments.</li>
+<li><strong>IP Logs</strong>: IP addresses and User-Agent data submitted with comments are permanently retained in our MongoDB database unless manually purged. This data is used solely for lawful tracing, anti-spam audits, and judicial cooperation.</li>
+<li><strong>Banning</strong>: Severe offenders may be banned by IP range or device fingerprint.</li>
+</ul>
+<h2>4. Disclaimer</h2>
+<ul>
+<li>Comments are user-owned and do not represent the blog owner.</li>
+<li>The blog owner is not liable for failed submissions due to network issues.</li>
+</ul>
+<h2>5. Governing Law</h2>
+<p>This site follows <strong>GDPR</strong>. Visitors in China must still comply with local laws; illegal content will be handled lawfully.</p>
+<hr>
+<p>For questions, contact us via the blog.</p>
+</div>
 </body>
 </html>
