@@ -1,74 +1,96 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
-    <meta charset="UTF-8">
-    <title>隐私政策 / Privacy Policy</title>
-    <style>
-        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; line-height: 1.7; padding: 20px; max-width: 800px; margin: auto; }
-        h1, h2 { border-bottom: 1px solid #ddd; padding-bottom: 6px; }
-        button { padding: 6px 12px; margin-bottom: 16px; cursor: pointer; }
-        .lang-en, .lang-zh { display: none; }
-        html:not(.lang-en) .lang-zh { display: block; }
-        html.lang-en .lang-en { display: block; }
-        html.lang-en .lang-zh { display: none; }
-    </style>
+<meta charset="UTF-8">
+<title>隐私政策 / Privacy Policy</title>
+<style>
+body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; line-height: 1.8; max-width: 800px; margin: 0 auto; padding: 20px; background: #fff; color: #333; }
+hr { border: none; border-top: 1px solid #ddd; margin: 30px 0; }
+ul { padding-left: 20px; }
+h1 { font-size: 24px; border-bottom: 2px solid #000; padding-bottom: 10px; }
+h2 { font-size: 18px; margin-top: 20px; }
+.lang-switcher { text-align: center; margin-bottom: 20px; }
+.lang-switcher a { display: inline-block; padding: 8px 16px; margin: 0 5px; text-decoration: none; background: #f0f0f0; border: 1px solid #ccc; border-radius: 4px; font-size: 14px; color: #333; }
+.lang-switcher a.active { background: #000; color: #fff; border-color: #000; }
+.lang-en { display: none; }
+.lang-zh { display: block; }
+#en:target ~ .lang-zh { display: none; }
+#en:target ~ .lang-en { display: block; }
+#en:target ~ .lang-switcher a.btn-zh { background: #f0f0f0; color: #333; border-color: #ccc; }
+#en:target ~ .lang-switcher a.btn-en { background: #000; color: #fff; border-color: #000; }
+#zh:target ~ .lang-en { display: none; }
+#zh:target ~ .lang-zh { display: block; }
+#zh:target ~ .lang-switcher a.btn-en { background: #f0f0f0; color: #333; border-color: #ccc; }
+#zh:target ~ .lang-switcher a.btn-zh { background: #000; color: #fff; border-color: #000; }
+body:not(:has(#zh:target)):not(:has(#en:target)) .lang-switcher a.btn-zh { background: #000; color: #fff; border-color: #000; }
+</style>
 </head>
 <body>
-    <button onclick="document.documentElement.classList.toggle('lang-en')">English / 中文</button>
-
-    <h1 class="lang-zh">隐私政策</h1>
-    <p class="lang-zh"><strong>最后更新：2026 年 8 月 15 日</strong></p>
-    <p class="lang-zh">本博客（156blog）部署于境外，面向全球访客提供服务。我们高度重视你的隐私，并依据 GDPR 及《中华人民共和国个人信息保护法》制定本政策。</p>
-
-    <h2 class="lang-zh">1. 我们收集哪些数据</h2>
-    <p class="lang-zh">为反垃圾评论与保障安全，系统自动记录：评论内容、昵称、邮箱（可选）、IP 地址、User‑Agent 及 Cloudflare Turnstile 验证数据。</p>
-
-    <h2 class="lang-zh">2. 数据用途</h2>
-    <p class="lang-zh">仅用于展示评论、拦截垃圾与运维排查。<strong>绝不用于广告画像、追踪或出售。</strong></p>
-
-    <h2 class="lang-zh">3. 存储与保留</h2>
-    <p class="lang-zh">评论长期保留；IP 与技术日志短期留存（≤90 天）后自动清理或匿名化。</p>
-
-    <h2 class="lang-zh">4. 你的权利</h2>
-    <p class="lang-zh">你有权访问、更正或删除你的评论及相关数据。请联系博主行使权利。</p>
-
-    <h2 class="lang-zh">5. 法律适用</h2>
-    <p class="lang-zh">本博客服务器位于境外，遵循 GDPR；若你位于中国境内，亦遵守 PIPL 长臂管辖，博主依法管理违法内容。</p>
-
-    <hr class="lang-zh">
-    <p class="lang-zh">如有疑问，请通过博客渠道联系我们。</p>
-
-    <!-- English -->
-    <h1 class="lang-en">Privacy Policy</h1>
-    <p class="lang-en"><strong>Last updated: August 15, 2026</strong></p>
-    <p class="lang-en">156blog is hosted outside China and available globally. We respect your privacy and comply with GDPR and China’s PIPL.</p>
-
-    <h2 class="lang-en">1. Data We Collect</h2>
-    <p class="lang-en">To prevent spam and ensure security, we automatically process: comment content, nickname, optional email, IP address, User‑Agent, and Cloudflare Turnstile verification data.</p>
-
-    <h2 class="lang-en">2. Purpose</h2>
-    <p class="lang-en">Data is used solely to display comments, block spam, and maintain service stability. <strong>We never use it for ads, tracking, or selling.</strong></p>
-
-    <h2 class="lang-en">3. Retention</h2>
-    <p class="lang-en">Comments are retained until deletion is requested. IP logs are kept for a short period (≤90 days) and then purged or anonymized.</p>
-
-    <h2 class="lang-en">4. Your Rights</h2>
-    <p class="lang-en">You may access, correct, or delete your comments and related data. Contact the blog owner to exercise these rights.</p>
-
-    <h2 class="lang-en">5. Governing Law</h2>
-    <p class="lang-en">The blog is hosted offshore under GDPR. If you are in China, PIPL still applies to illegal content, and the blog owner will comply with lawful requests.</p>
-
-    <hr class="lang-en">
-    <p class="lang-en">For questions, contact us via the blog.</p>
-
-    <script>
-        // 记住用户选择
-        document.querySelector('button').addEventListener('click', () => {
-            localStorage.setItem('lang', document.documentElement.classList.contains('lang-en') ? 'zh' : 'en');
-        });
-        if (localStorage.getItem('lang') === 'en') {
-            document.documentElement.classList.add('lang-en');
-        }
-    </script>
-</body>
-</html>
+<div id="zh"></div>
+<div id="en"></div>
+<div class="lang-switcher">
+<a href="#zh" class="btn-zh">中文</a>
+<a href="#en" class="btn-en">English</a>
+</div>
+<div class="lang-zh">
+<h1>隐私政策</h1>
+<p><strong>最后更新：2026 年 8 月 15 日</strong></p>
+<p>本博客（156blog）部署于境外，面向全球访客提供服务。我们高度重视您的隐私，并依据《通用数据保护条例》（GDPR）及《中华人民共和国个人信息保护法》（PIPL）制定本政策。</p>
+<h2>1. 我们收集哪些数据</h2>
+<p>为反垃圾评论与保障服务安全，系统会自动记录以下数据：</p>
+<ul>
+<li><strong>评论内容</strong>：您主动提交的文字、昵称与邮箱（均为必填项），以及网址（可选）。</li>
+<li><strong>技术日志</strong>：包括 IP 地址、浏览器 User-Agent、评论时间戳。</li>
+<li><strong>验证数据</strong>：我们使用 <a href="https://www.geetest.com/" target="_blank">GeeTest（极验）</a> 进行人机验证。验证过程中，客户端会向 GeeTest 发送行为特征（如鼠标轨迹、点击坐标、User-Agent、IP 地址等）以判断是否为真人。相关数据由 GeeTest 作为独立处理方按其隐私政策处理，我们仅接收验证结果。</li>
+</ul>
+<h2>2. 我们如何使用数据</h2>
+<p>您的数据仅用于：</p>
+<ul>
+<li>展示评论内容。</li>
+<li>拦截垃圾评论、防止恶意攻击及滥用。</li>
+<li>排查服务故障，优化访问体验。</li>
+</ul>
+<p><strong>我们承诺：绝不将您的数据用于广告画像、用户追踪或出售给第三方。</strong></p>
+<h2>3. 数据存储与保留</h2>
+<p>评论内容及关联数据（含昵称、邮箱、评论正文）存储于我们的 MongoDB 数据库中。</p>
+<ul>
+<li><strong>IP 地址日志</strong>：出于安全审计、反垃圾溯源及配合司法调查的需要，提交评论时的 IP 地址将被<strong>永久保存</strong>，直至 MongoDB 储存库中的相关数据被手动删除为止。</li>
+<li><strong>技术日志</strong>：除 IP 地址外的其他技术日志（如 User-Agent）同样长期留存，除非数据库整体被清理。</li>
+</ul>
+<p><strong>永久存储的法律依据</strong>：我们依据 GDPR 第 6(1)(f) 条（正当利益）及《中华人民共和国网络安全法》等相关法律法规的要求，将 IP 日志用于防范恶意攻击、追溯垃圾评论源头及配合监管机关依法调取数据。</p>
+<h2>4. 您的权利（GDPR）</h2>
+<p>作为数据主体，您拥有以下权利：</p>
+<ul>
+<li><strong>访问权</strong>：查询我们是否持有您的数据。</li>
+<li><strong>删除权</strong>：要求删除您的评论及相关技术日志。</li>
+<li><strong>更正权</strong>：要求修改不准确的评论内容。</li>
+</ul>
+<p>如需行使上述权利，请通过博客相关渠道联系我们。</p>
+<h2>5. 法律适用</h2>
+<p>本博客服务器位于境外，遵循 GDPR 标准。若您位于中国境内，请注意：本政策同时遵守 PIPL 的长臂管辖规定；我们依法履行评论内容管理责任，对违法违规内容将依法采取处置措施。</p>
+<hr>
+<p>如有任何疑问，请通过博客相关渠道联系我们。</p>
+</div>
+<div class="lang-en">
+<h1>Privacy Policy</h1>
+<p><strong>Last updated: August 15, 2026</strong></p>
+<p>156blog is hosted outside China and available globally. We respect your privacy and comply with the GDPR and China's PIPL.</p>
+<h2>1. Data We Collect</h2>
+<p>To prevent spam and ensure security, we automatically process:</p>
+<ul>
+<li><strong>Comment Content</strong>: Text, nickname, and email (all required), plus an optional website URL.</li>
+<li><strong>Technical Logs</strong>: IP address, User-Agent, and timestamp.</li>
+<li><strong>Verification Data</strong>: We use <a href="https://www.geetest.com/" target="_blank">GeeTest</a> for human verification. During verification, behavioral features (e.g., mouse trajectory, click coordinates, User-Agent, IP address) are sent to GeeTest to distinguish humans from bots. GeeTest acts as an independent processor under its own <a href="https://www.geetest.com/Privacy" target="_blank">Privacy Policy</a>. We do not collect the raw behavioral data, only the verification result.</li>
+</ul>
+<h2>2. Purpose of Processing</h2>
+<p>Your data is used solely for:</p>
+<ul>
+<li>Displaying comments.</li>
+<li>Blocking spam and preventing abuse.</li>
+<li>Maintaining service stability.</li>
+</ul>
+<p><strong>We never use your data for ads, profiling, or selling to third parties.</strong></p>
+<h2>3. Retention</h2>
+<p>Comment content and associated metadata are stored in our MongoDB database.</p>
+<ul>
+<li><strong>IP Address Logs</strong>: For security auditing, anti-spam tracing, and compliance with lawful investigation requests, the IP address submitted with your comment will be <strong>retained permanently</strong> until the relevant data is manually deleted from 
