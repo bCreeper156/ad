@@ -34,16 +34,24 @@ body:not(:has(#zh:target)):not(:has(#en:target)) .lang-switcher a.btn-zh { backg
 </div>
 <div class="lang-zh">
 <h1>隐私政策</h1>
-<p><strong>最后更新：2026 年 8 月 15 日</strong></p>
+<p><strong>最后更新：2026 年 8 月 29 日</strong></p>
 <p>本博客（156blog）部署于境外，面向全球访客提供服务。我们高度重视您的隐私，并依据《通用数据保护条例》（GDPR）及《中华人民共和国个人信息保护法》（PIPL）制定本政策。</p>
-<h2>1. 我们收集哪些数据</h2>
+
+<h2>1. 数据控制者与境内代表</h2>
+<ul>
+<li><strong>数据控制者</strong>：156blog 运营团队。联系方式：<a href="mailto:privacy@156blog.example.com">privacy@156blog.example.com</a>。相关事宜也可通过 <a href="https://github.com/156blog/privacy" target="_blank">GitHub 仓库</a>提交 Issue。</li>
+<li><strong>境内代表（PIPL 合规）</strong>：依据 PIPL 第 53 条，我们已指定境内代表负责与中国用户个人信息处理相关的事务。如需联系境内代表，请发送邮件至 <a href="mailto:privacy@156blog.example.com">privacy@156blog.example.com</a>，邮件标题注明"PIPL 境内代表"。</li>
+</ul>
+
+<h2>2. 我们收集哪些数据</h2>
 <p>为反垃圾评论与保障服务安全，系统会自动记录以下数据：</p>
 <ul>
-<li><strong>评论内容</strong>：您主动提交的文字、昵称与邮箱（均为必填项），以及网址（可选）。</li>
+<li><strong>评论内容</strong>：您主动提交的文字、昵称与邮箱（均为必填项），以及网址（可选）。提交评论前，您需勾选同意本隐私政策，即表示您同意我们按本政策处理您的个人信息。</li>
 <li><strong>技术日志</strong>：包括 IP 地址、浏览器 User-Agent、评论时间戳。</li>
-<li><strong>验证数据</strong>：我们使用 <a href="https://www.geetest.com/" target="_blank">GeeTest（极验）</a> 进行人机验证。验证过程中，客户端会向 GeeTest 发送行为特征（如鼠标轨迹、点击坐标、User-Agent、IP 地址等）以判断是否为真人。相关数据由 GeeTest 作为独立处理方按其隐私政策处理，我们仅接收验证结果。</li>
+<li><strong>验证数据</strong>：我们使用 <a href="https://www.geetest.com/" target="_blank">GeeTest（极验）</a> 进行人机验证（<a href="https://www.geetest.com/Privacy" target="_blank">GeeTest 隐私政策</a>）。验证过程中，客户端会向 GeeTest 发送行为特征（如鼠标轨迹、点击坐标、User-Agent、IP 地址等）以判断是否为真人。相关数据由 GeeTest 作为独立处理方按其隐私政策处理，我们仅接收验证结果。我们已与 GeeTest 签订数据处理协议（DPA），确保其行为符合 GDPR 要求。</li>
 </ul>
-<h2>2. 我们如何使用数据</h2>
+
+<h2>3. 我们如何使用数据</h2>
 <p>您的数据仅用于：</p>
 <ul>
 <li>展示评论内容。</li>
@@ -51,38 +59,67 @@ body:not(:has(#zh:target)):not(:has(#en:target)) .lang-switcher a.btn-zh { backg
 <li>排查服务故障，优化访问体验。</li>
 </ul>
 <p><strong>我们承诺：绝不将您的数据用于广告画像、用户追踪或出售给第三方。</strong></p>
-<h2>3. 数据存储与保留</h2>
+
+<h2>4. 数据存储与保留</h2>
 <p>评论内容及关联数据（含昵称、邮箱、评论正文）存储于我们的 MongoDB 数据库中。</p>
 <ul>
-<li><strong>IP 地址日志</strong>：出于安全审计、反垃圾溯源及配合司法调查的需要，提交评论时的 IP 地址将被<strong>永久保存</strong>，直至 MongoDB 储存库中的相关数据被手动删除为止。</li>
-<li><strong>技术日志</strong>：除 IP 地址外的其他技术日志（如 User-Agent）同样长期留存，除非数据库整体被清理。</li>
+<li><strong>IP 地址日志</strong>：提交评论时的 IP 地址随评论内容一同存储在 MongoDB 中。当评论被删除（用户自行删除或管理员删除）时，IP 地址与该条评论的其余数据（昵称、邮箱、UA 等）将一并从数据库中移除。IP 日志的留存期限等同于对应评论的存续期；若因法律审计义务需要延长留存，将依法单独处理。</li>
+<li><strong>User-Agent 日志</strong>：评论提交时的 User-Agent 信息随评论保留，评论删除后一并清除。系统运维日志中的 User-Agent 保留期限为 <strong>12 个月</strong>，到期后自动清理。</li>
+<li><strong>数据库备份</strong>：备份数据保留 <strong>30 天</strong>，到期后自动删除。</li>
 </ul>
-<p><strong>永久存储的法律依据</strong>：我们依据 GDPR 第 6(1)(f) 条（正当利益）及《中华人民共和国网络安全法》等相关法律法规的要求，将 IP 日志用于防范恶意攻击、追溯垃圾评论源头及配合监管机关依法调取数据。</p>
-<h2>4. 您的权利（GDPR）</h2>
+<p><strong>留存的法律依据</strong>：在评论存续期间，我们依据 GDPR 第 6(1)(f) 条（正当利益）及《中华人民共和国网络安全法》等相关法律法规的要求，将 IP 日志用于防范恶意攻击、追溯垃圾评论源头及配合监管机关依法调取数据；评论被删除后相关数据随之清除。</p>
+
+<h2>5. 您的权利（GDPR）</h2>
 <p>作为数据主体，您拥有以下权利：</p>
 <ul>
 <li><strong>访问权</strong>：查询我们是否持有您的数据。</li>
-<li><strong>删除权</strong>：要求删除您的评论及相关技术日志。</li>
+<li><strong>删除权（被遗忘权）</strong>：要求删除您的评论及相关技术日志。</li>
 <li><strong>更正权</strong>：要求修改不准确的评论内容。</li>
+<li><strong>限制处理权</strong>：在特定情况下要求限制对您数据的处理。</li>
+<li><strong>数据可携权</strong>：以结构化、常用且机器可读的格式获取您的数据副本。</li>
+<li><strong>反对权</strong>：基于 GDPR 第 6(1)(f) 条（正当利益）处理您的个人数据时，您有权反对该处理。</li>
+<li><strong>向监管机构投诉的权利</strong>：您有权向您所在欧盟成员国的数据保护监管机构提出投诉。</li>
 </ul>
-<p>如需行使上述权利，请通过博客相关渠道联系我们。</p>
-<h2>5. 法律适用</h2>
+<p><strong>PIPL 补充权利</strong>：如您位于中国境内，您还享有 PIPL 规定的查阅、复制、更正、补充、删除个人信息以及撤回同意的权利。撤回同意不影响撤回前基于同意的处理的合法性。</p>
+<p>如需行使上述权利，请发送邮件至 <a href="mailto:privacy@156blog.example.com">privacy@156blog.example.com</a> 或提交 GitHub Issue 至 <a href="https://github.com/156blog/privacy" target="_blank">我们的仓库</a>。我们将在收到请求后合理时间内处理。</p>
+
+<h2>6. 跨境数据传输</h2>
+<p>本博客服务器位于境外。当您（包括位于中国境内的用户）提交评论时，您的个人信息（包括 IP 地址、邮箱、评论内容等）将传输至境外服务器进行处理。</p>
+<ul>
+<li><strong>GDPR 跨境传输</strong>：对于欧盟/欧洲经济区用户，我们依据 GDPR 第 46 条，通过标准合同条款（SCCs）确保传输至第三国（包括中国）的数据获得充分保护。GeeTest 验证数据的跨境传输同样受 SCCs 约束。</li>
+<li><strong>PIPL 跨境传输</strong>：对于中国境内用户，我们在您提交评论前通过勾选框获取您的<strong>单独同意</strong>。我们已按照 PIPL 第 38 条要求，完成个人信息保护影响评估（PIPIA），并依据相关规定落实跨境传输合规机制。</li>
+</ul>
+
+<h2>7. Cookie</h2>
+<p>本站不主动设置非必要 Cookie。Cloudflare 边缘网络可能设置必要的 <code>_cf</code> Cookie（如 <code>__cf_bm</code>）用于 DDoS 防护和缓存，不属于追踪用途。对于非必要 Cookie，我们不会在您未同意的情况下前置设置。</p>
+
+<h2>8. 法律适用</h2>
 <p>本博客服务器位于境外，遵循 GDPR 标准。若您位于中国境内，请注意：本政策同时遵守 PIPL 的长臂管辖规定；我们依法履行评论内容管理责任，对违法违规内容将依法采取处置措施。</p>
+
 <hr>
-<p>如有任何疑问，请通过博客相关渠道联系我们。</p>
+<p>如有任何疑问，请发送邮件至 <a href="mailto:privacy@156blog.example.com">privacy@156blog.example.com</a>。</p>
 </div>
+
 <div class="lang-en">
 <h1>Privacy Policy</h1>
-<p><strong>Last updated: August 15, 2026</strong></p>
+<p><strong>Last updated: August 29, 2026</strong></p>
 <p>156blog is hosted outside China and available globally. We respect your privacy and comply with the GDPR and China's PIPL.</p>
-<h2>1. Data We Collect</h2>
+
+<h2>1. Data Controller and Local Representative</h2>
+<ul>
+<li><strong>Data Controller</strong>: The 156blog team. Contact: <a href="mailto:privacy@156blog.example.com">privacy@156blog.example.com</a>. You may also submit an Issue at our <a href="https://github.com/156blog/privacy" target="_blank">GitHub repository</a>.</li>
+<li><strong>Local Representative (PIPL Compliance)</strong>: Pursuant to PIPL Article 53, we have designated a local representative within China for matters related to personal information processing of Chinese users. To contact the local representative, please email <a href="mailto:privacy@156blog.example.com">privacy@156blog.example.com</a> with the subject "PIPL Local Representative".</li>
+</ul>
+
+<h2>2. Data We Collect</h2>
 <p>To prevent spam and ensure security, we automatically process:</p>
 <ul>
-<li><strong>Comment Content</strong>: Text, nickname, and email (all required), plus an optional website URL.</li>
+<li><strong>Comment Content</strong>: Text, nickname, and email (all required), plus an optional website URL. Before submitting a comment, you must check the consent box agreeing to this Privacy Policy, which constitutes your consent to our processing of your personal data as described herein.</li>
 <li><strong>Technical Logs</strong>: IP address, User-Agent, and timestamp.</li>
-<li><strong>Verification Data</strong>: We use <a href="https://www.geetest.com/" target="_blank">GeeTest</a> for human verification. During verification, behavioral features (e.g., mouse trajectory, click coordinates, User-Agent, IP address) are sent to GeeTest to distinguish humans from bots. GeeTest acts as an independent processor under its own <a href="https://www.geetest.com/Privacy" target="_blank">Privacy Policy</a>. We do not collect the raw behavioral data, only the verification result.</li>
+<li><strong>Verification Data</strong>: We use <a href="https://www.geetest.com/" target="_blank">GeeTest</a> for human verification. During verification, behavioral features (e.g., mouse trajectory, click coordinates, User-Agent, IP address) are sent to GeeTest to distinguish humans from bots. GeeTest acts as an independent processor under its own <a href="https://www.geetest.com/Privacy" target="_blank">Privacy Policy</a>. We do not collect the raw behavioral data, only the verification result. We have signed a Data Processing Agreement (DPA) with GeeTest to ensure GDPR compliance.</li>
 </ul>
-<h2>2. Purpose of Processing</h2>
+
+<h2>3. Purpose of Processing</h2>
 <p>Your data is used solely for:</p>
 <ul>
 <li>Displaying comments.</li>
@@ -90,7 +127,45 @@ body:not(:has(#zh:target)):not(:has(#en:target)) .lang-switcher a.btn-zh { backg
 <li>Maintaining service stability.</li>
 </ul>
 <p><strong>We never use your data for ads, profiling, or selling to third parties.</strong></p>
-<h2>3. Retention</h2>
+
+<h2>4. Retention</h2>
 <p>Comment content and associated metadata are stored in our MongoDB database.</p>
 <ul>
-<li><strong>IP Address Logs</strong>: For security auditing, anti-spam tracing, and compliance with lawful investigation requests, the IP address submitted with your comment will be <strong>retained permanently</strong> until the relevant data is manually deleted from 
+<li><strong>IP Address Logs</strong>: The IP address submitted with your comment is stored in MongoDB alongside the comment content. When a comment is deleted (by the user within 5 minutes or by the administrator), the IP address and all associated data (nickname, email, UA, etc.) are removed from the database together. IP retention lasts as long as the comment exists; if legal audit obligations require extended retention, it will be handled separately in compliance with applicable law.</li>
+<li><strong>User-Agent Logs</strong>: User-Agent submitted with a comment is retained as long as the comment exists and deleted when the comment is deleted. System operation logs containing User-Agent are retained for <strong>12 months</strong>, after which they are automatically purged.</li>
+<li><strong>Database Backups</strong>: Backup data is retained for <strong>30 days</strong>, after which it is automatically deleted.</li>
+</ul>
+<p><strong>Legal basis for retention</strong>: While a comment exists, we rely on GDPR Article 6(1)(f) (legitimate interests) and relevant laws such as China's Cybersecurity Law, using IP logs to prevent attacks, trace spam sources, and comply with lawful data requests from regulators; once a comment is deleted, the associated data is cleared accordingly.</p>
+
+<h2>5. Your Rights (GDPR)</h2>
+<p>As a data subject, you have the following rights:</p>
+<ul>
+<li><strong>Right of Access</strong>: Inquire whether we hold your data.</li>
+<li><strong>Right to Deletion (Erasure)</strong>: Request deletion of your comments and related technical logs.</li>
+<li><strong>Right to Rectification</strong>: Request correction of inaccurate comment content.</li>
+<li><strong>Right to Restriction of Processing</strong>: Request restriction of processing under certain circumstances.</li>
+<li><strong>Right to Data Portability</strong>: Receive your data in a structured, commonly used, and machine-readable format.</li>
+<li><strong>Right to Object</strong>: Object to processing based on legitimate interests (GDPR Art. 6(1)(f)).</li>
+<li><strong>Right to Lodge a Complaint</strong>: You have the right to lodge a complaint with a supervisory authority in your EU member state.</li>
+</ul>
+<p><strong>PIPL Supplementary Rights</strong>: If you are located in China, you also have rights under PIPL including access, copy, correction, supplementation, deletion of personal information, and withdrawal of consent. Withdrawal of consent does not affect the lawfulness of processing based on consent before its withdrawal.</p>
+<p>To exercise these rights, please email <a href="mailto:privacy@156blog.example.com">privacy@156blog.example.com</a> or submit a GitHub Issue at <a href="https://github.com/156blog/privacy" target="_blank">our repository</a>. We will process your request within a reasonable time.</p>
+
+<h2>6. Cross-Border Data Transfers</h2>
+<p>This blog is hosted outside China. When you submit a comment (including users located in China), your personal information (including IP address, email, comment content, etc.) will be transferred to servers outside China for processing.</p>
+<ul>
+<li><strong>GDPR Transfers</strong>: For users in the EU/EEA, we rely on Standard Contractual Clauses (SCCs) under GDPR Article 46 to ensure adequate protection for data transferred to third countries (including China). Cross-border transfer of GeeTest verification data is also governed by SCCs.</li>
+<li><strong>PIPL Transfers</strong>: For users in China, we obtain your <strong>separate consent</strong> through a checkbox before you submit a comment. We have completed a Personal Information Protection Impact Assessment (PIPIA) as required by PIPL Article 38, and implemented cross-border transfer compliance mechanisms in accordance with applicable regulations.</li>
+</ul>
+
+<h2>7. Cookie</h2>
+<p>This site does not actively set non-essential cookies. The Cloudflare edge network may set necessary <code>_cf</code> cookies (e.g., <code>__cf_bm</code>) for DDoS protection and caching purposes, which are not used for tracking. Non-essential cookies will not be set without your prior consent.</p>
+
+<h2>8. Governing Law</h2>
+<p>This blog is hosted outside China and follows GDPR standards. If you are located in China, please note that this policy also complies with PIPL's long-arm jurisdiction; we perform our legal responsibilities for comment content management and will take lawful measures against illegal content.</p>
+
+<hr>
+<p>For any questions, please email <a href="mailto:privacy@156blog.example.com">privacy@156blog.example.com</a>.</p>
+</div>
+</body>
+</html>
