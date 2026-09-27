@@ -23,6 +23,13 @@ h2 { font-size: 18px; margin-top: 20px; }
 #zh:target ~ .lang-switcher a.btn-en { background: #f0f0f0; color: #333; border-color: #ccc; }
 #zh:target ~ .lang-switcher a.btn-zh { background: #000; color: #fff; border-color: #000; }
 body:not(:has(#zh:target)):not(:has(#en:target)) .lang-switcher a.btn-zh { background: #000; color: #fff; border-color: #000; }
+@media (prefers-color-scheme: dark) {
+  body { background: #121212; color: #e0e0e0; }
+  hr { border-top: 1px solid #333; }
+  h1 { border-bottom: 2px solid #fff; }
+  .lang-switcher a { background: #333; border-color: #555; color: #e0e0e0; }
+  .lang-switcher a.active { background: #fff; color: #000; border-color: #fff; }
+}
 </style>
 </head>
 <body>
@@ -32,59 +39,79 @@ body:not(:has(#zh:target)):not(:has(#en:target)) .lang-switcher a.btn-zh { backg
 <a href="#zh" class="btn-zh">中文</a>
 <a href="#en" class="btn-en">English</a>
 </div>
+
+<!-- 中文版 -->
 <div class="lang-zh">
 <h1>用户与评论政策</h1>
-<p><strong>最后更新：2026 年 8 月 15 日</strong></p>
-<p>欢迎来到 156blog。为维护理性的交流环境，本站实行<strong>匿名评论</strong>，但匿名不代表免责。请遵守以下规则：</p>
+<p><strong>最后更新：2026 年 9 月 27 日</strong></p>
+<p>欢迎来到 156blog。为维护理性的交流环境，本站评论要求填写昵称与邮箱，但不会公开展示邮箱。请遵守以下规则：</p>
+
 <h2>1. 发言规则</h2>
 <ul>
 <li><strong>必填信息</strong>：发表评论需填写昵称与邮箱，二者均为必填项；网址为可选。</li>
 <li><strong>禁止内容</strong>：严禁发布包含攻击他人、网暴、歧视、造谣、色情、暴力、恐怖主义或垃圾广告等违法违规内容的评论。</li>
+<li><strong>友善交流</strong>：欢迎不同观点，但请基于事实和逻辑表达，对他人保持基本的尊重。</li>
 </ul>
+
 <h2>2. 人机验证</h2>
 <p>为防止机器人滥用，提交评论前需通过 <strong>GeeTest（极验）</strong> 人机验证（滑动/点选等）。该验证由 GeeTest 提供，行为数据由其服务端处理，我们不存储您的鼠标轨迹等原始行为数据，仅保留验证是否通过的结果。</p>
+
 <h2>3. 管理权限</h2>
 <ul>
 <li><strong>删除与隐藏</strong>：有权删除或隐藏违反上述规则的评论。</li>
-<li><strong>IP 日志留存</strong>：系统后台会永久留存提交评论时的 IP 地址及 User-Agent 数据于 MongoDB 数据库中，除非数据库数据被手动清除。此日志用于配合司法机关溯源及反垃圾审计，不作他用。</li>
-<li><strong>封禁</strong>：对于严重违规者，有权封禁其 IP 段或设备指纹。</li>
+<li><strong>IP 日志留存</strong>：系统会在您提交评论时记录 IP 地址及 User-Agent，存储于 Cloudflare D1 数据库中。该日志随评论数据一并保存；评论被删除（用户自行删除或管理员删除）时，日志一并清除。此数据仅用于反垃圾审计及依法配合监管机关调取，不作他用。</li>
+<li><strong>违规处理</strong>：对于严重违规者，有权删除评论并限制其后续评论提交。</li>
 </ul>
+
 <h2>4. 免责声明</h2>
 <ul>
 <li>评论区内容仅代表评论者个人观点，不代表博主或本站立场。</li>
 <li>因网络延迟、服务器故障导致的评论提交失败，博主不承担赔偿责任。</li>
+<li>评论内容一经发布，请自行承担相应责任；博主不对评论的准确性、完整性承担连带责任。</li>
 </ul>
+
 <h2>5. 法律适用与管辖</h2>
 <p>本博客服务器部署于境外，评论数据处理遵循 <strong>GDPR</strong> 标准。鉴于互联网无国界，若您在中国大陆境内访问本站，请知悉：中国法律禁止在网络上传播违法信息。如评论内容违反中国法律，博主将依法配合相关机构进行调查与处置。</p>
+
 <hr>
-<p>如有任何疑问，请通过博客相关渠道联系我们。</p>
+<p>如有任何疑问，请发送邮件至 <a href="mailto:humingxuan20241@outlook.com">humingxuan20241@outlook.com</a>。</p>
 </div>
+
+<!-- 英文版 -->
 <div class="lang-en">
 <h1>Comment Policy</h1>
-<p><strong>Last updated: August 15, 2026</strong></p>
-<p>Welcome to 156blog. We offer <strong>anonymous commenting</strong>; anonymity does not mean immunity. Please observe the following rules:</p>
+<p><strong>Last updated: September 27, 2026</strong></p>
+<p>Welcome to 156blog. To maintain a rational discussion environment, comments require a nickname and email address; your email will not be publicly displayed. Please observe the following rules:</p>
+
 <h2>1. Rules</h2>
 <ul>
 <li><strong>Required Information</strong>: To post a comment, a nickname and email address are required; a website URL is optional.</li>
 <li><strong>Prohibited Content</strong>: No harassment, hate speech, defamation, pornography, violence, terrorism, or spam.</li>
+<li><strong>Friendly Communication</strong>: Different views are welcome, but please express them based on facts and logic, and treat others with basic respect.</li>
 </ul>
+
 <h2>2. Human Verification</h2>
 <p>All comments require <strong>GeeTest</strong> human verification (slide/captcha). Verification is processed by GeeTest; we do not store your raw behavioral data (e.g., mouse paths), only whether the verification passed.</p>
+
 <h2>3. Moderation</h2>
 <ul>
 <li><strong>Deletion</strong>: The blog owner may delete or hide violating comments.</li>
-<li><strong>IP Logs</strong>: IP addresses and User-Agent data submitted with comments are permanently retained in our MongoDB database unless manually purged. This data is used solely for lawful tracing, anti-spam audits, and judicial cooperation.</li>
-<li><strong>Banning</strong>: Severe offenders may be banned by IP range or device fingerprint.</li>
+<li><strong>IP Logs</strong>: When you submit a comment, the system records your IP address and User-Agent, stored in a Cloudflare D1 database. This log is retained alongside the comment; when the comment is deleted (by you or the administrator), the log is cleared together. This data is used solely for anti-spam auditing and lawful cooperation with regulators.</li>
+<li><strong>Violation Handling</strong>: Severe offenders may have their comments deleted and their ability to submit further comments restricted.</li>
 </ul>
+
 <h2>4. Disclaimer</h2>
 <ul>
-<li>Comments are user-owned and do not represent the blog owner.</li>
+<li>Comments represent the personal views of the commenter and do not represent the blog owner or this site.</li>
 <li>The blog owner is not liable for failed submissions due to network issues.</li>
+<li>Once posted, commenters bear responsibility for their own content; the blog owner assumes no joint liability for the accuracy or completeness of comments.</li>
 </ul>
+
 <h2>5. Governing Law</h2>
 <p>This site follows <strong>GDPR</strong>. Visitors in China must still comply with local laws; illegal content will be handled lawfully.</p>
+
 <hr>
-<p>For questions, contact us via the blog.</p>
+<p>For questions, please email <a href="mailto:humingxuan20241@outlook.com">humingxuan20241@outlook.com</a>.</p>
 </div>
 </body>
 </html>
